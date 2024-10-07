@@ -64,3 +64,27 @@ class Manager extends Employee {
 }
 
 //Task 4 Check the Department class
+
+//Task 5
+// Create departments
+const engineering = new Department('Engineering');
+const sales = new Department('Sales');
+
+// Create employees
+const engineerAlice = new Employee('Joe', 100000, 'Engineer', engineering.name);
+const engineerBob = new Employee('John', 50000, 'Engineering intern', engineering.name);
+const managerDavid = new Manager('Alison', 90000, 'Engineering', 15000); // Manager with bonus
+
+const salesRepEve = new Employee('Adam', 85000, 'Sales Representative', sales.name);
+const salesRepFrank = new Employee('Fred', 70000, 'Junior Sales Rep', sales.name);
+const managerGrace = new Manager('Ava', 105000, 'Sales', 20000); // Manager with bonus
+
+// Assign employees to departments
+engineering.addEmployee(engineerAlice);
+engineering.addEmployee(engineerBob);
+engineering.addEmployee(managerDavid);
+
+sales.addEmployee(salesRepEve);
+sales.addEmployee(salesRepFrank);
+sales.addEmployee(managerGrace);
+
