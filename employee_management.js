@@ -31,11 +31,27 @@ class Department {
   
          
           for (let i = 0; i < this.employees.length; i++) {
-              salaryTotal += this.employees[i].salary; // Add each employee's salary to the total
+              salaryTotal += this.employees[i].salary; 
           }
   
           return salaryTotal; 
       }
+
+      calculateTotalSalaryWithBonus() {
+        let totalSalaryWithBonus = 0; 
+
+        
+        for (let i = 0; i < this.employees.length; i++) {
+            const employee = this.employees[i];
+            if (employee instanceof Manager) {
+                totalSalaryWithBonus += employee.getTotalCompensation(); 
+            } else {
+                totalSalaryWithBonus += employee.salary; 
+            }
+        }
+
+        return totalSalaryWithBonus; 
+    }
   }
 
 //Task 3
@@ -46,3 +62,5 @@ class Manager extends Employee {
     
 }
 }
+
+//Task 4 Check the Department class
