@@ -38,4 +38,11 @@ class Department {
       }
   }
 
-//
+//Task 3
+class Manager extends Employee {
+    constructor(name, salary, department, bonus) {
+        super(name, salary, "Manager", department); 
+        this.bonus = bonus; 
+    
+}
+}
